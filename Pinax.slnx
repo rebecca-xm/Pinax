@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="Pinax.API/Pinax.API.csproj" />
+  <Project Path="Pinax.Application/Pinax.Application.csproj" />
+  <Project Path="Pinax.Domain/Pinax.Domain.csproj" />
+  <Project Path="Pinax.Infrastructure/Pinax.Infrastructure.csproj" />
+</Solution>
