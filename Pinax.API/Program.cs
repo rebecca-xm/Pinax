@@ -1,8 +1,11 @@
+using Pinax.Infrastructure;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
 builder.Services.AddControllers();
+builder.Services.AddInfrastructure(builder.Configuration); //registra i servizi dell'infrastruttura (database)
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 

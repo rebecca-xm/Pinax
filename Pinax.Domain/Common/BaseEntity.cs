@@ -4,8 +4,8 @@
 	{
 		public int Id { get; private set; }
 		public string OpInsert { get; set; }
-		public DateTime? DtInsert { get; set; }
-		public string OpUpdate { get; set; }
+		public DateTime DtInsert { get; set; }
+		public string? OpUpdate { get; set; }
 		public DateTime? DtUpdate { get; set; }
 		public string? OpDelete { get; set; }
 		public DateTime? DtDelete { get; set; }
