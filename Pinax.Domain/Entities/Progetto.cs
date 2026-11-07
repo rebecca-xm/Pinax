@@ -10,5 +10,6 @@ namespace Pinax.Domain.Entities
 		public string? Colore { get; set; }
 		public bool Archiviato { get; set; }
 		public ICollection<Stato> Stati { get; set; } = new List<Stato>();
+		public ICollection<Attivita> Attivita { get; set; } = new List<Attivita>();
 	}
 }

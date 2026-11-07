@@ -8,5 +8,6 @@ namespace Pinax.Domain.Entities
 		public int Ordine { get; set; }
 		public int ProgettoId { get; set; }
 		public Progetto Progetto { get; set; } = null!;
+		public ICollection<Attivita> Attivita { get; set; } = new List<Attivita>();
 	}
 }

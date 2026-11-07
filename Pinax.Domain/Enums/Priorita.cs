@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Pinax.Domain.Enums
+﻿namespace Pinax.Domain.Enums
 {
 	public enum Priorita
 	{
-		Bassa,
-		Media,
-		Alta,
-		Urgente
+		Bassa = 0,
+		Media = 1,
+		Alta = 2,
+		Urgente = 3
 	}
 }

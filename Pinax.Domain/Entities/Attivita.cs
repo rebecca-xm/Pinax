@@ -15,5 +15,6 @@ namespace Pinax.Domain.Entities
 		public ICollection<AssegnazioneAttivita> Assegnazioni { get; set; } = new List<AssegnazioneAttivita>();
 		public DateTime? Scadenza { get; set; }
 		public Priorita Priorita { get; set; }
+		public int Numero { get; set; }
 	}
 }
