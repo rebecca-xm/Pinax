@@ -4,13 +4,11 @@ using Pinax.Domain.Entities;
 
 namespace Pinax.Infrastructure.Persistence.Configurations
 {
-	public class StatoConfiguration : IEntityTypeConfiguration<Stato> //implementazione interfaccia
+	public class StatoConfiguration : BaseEntityConfiguration<Stato> //eredita la configurazione comune da BaseEntityConfiguration
 	{
-		public void Configure(EntityTypeBuilder<Stato> builder)
+		protected override void ConfigureEntity(EntityTypeBuilder<Stato> builder)
 		{
 			builder.ToTable("Stati"); //nome tabella
-
-			builder.HasKey(s => s.Id); //chiave primaria
 
 			builder.Property(s => s.Nome) //proprietà Nome
 				.IsRequired()

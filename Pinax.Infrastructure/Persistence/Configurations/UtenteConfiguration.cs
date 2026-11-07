@@ -4,13 +4,11 @@ using Pinax.Domain.Entities;
 
 namespace Pinax.Infrastructure.Persistence.Configurations
 {
-	public class UtenteConfiguration : IEntityTypeConfiguration<Utente> //implementazione interfaccia
+	public class UtenteConfiguration : BaseEntityConfiguration<Utente> //eredita la configurazione comune da BaseEntityConfiguration
 	{
-		public void Configure(EntityTypeBuilder<Utente> builder)
+		protected override void ConfigureEntity(EntityTypeBuilder<Utente> builder)
 		{
 			builder.ToTable("Utenti"); //nome tabella
-
-			builder.HasKey(u => u.Id); //chiave primaria
 
 			builder.Property(u => u.Nome) //proprietà Nome
 				.IsRequired()

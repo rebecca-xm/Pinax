@@ -4,13 +4,11 @@ using Pinax.Domain.Entities;
 
 namespace Pinax.Infrastructure.Persistence.Configurations
 {
-	public class AttivitaConfiguration : IEntityTypeConfiguration<Attivita> //implementazione interfaccia
+	public class AttivitaConfiguration : BaseEntityConfiguration<Attivita> //eredita la configurazione comune da BaseEntityConfiguration
 	{
-		public void Configure(EntityTypeBuilder<Attivita> builder)
+		protected override void ConfigureEntity(EntityTypeBuilder<Attivita> builder)
 		{
 			builder.ToTable("Attivita"); //nome tabella
-
-			builder.HasKey(a => a.Id); //chiave primaria
 
 			builder.Property(a => a.Nome) //proprietà Nome
 				.IsRequired()

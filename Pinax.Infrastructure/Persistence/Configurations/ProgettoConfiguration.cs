@@ -4,13 +4,11 @@ using Pinax.Domain.Entities;
 
 namespace Pinax.Infrastructure.Persistence.Configurations
 {
-	public class ProgettoConfiguration : IEntityTypeConfiguration<Progetto> //implementazione interfaccia
+	public class ProgettoConfiguration : BaseEntityConfiguration<Progetto> //eredita la configurazione comune da BaseEntityConfiguration
 	{
-		public void Configure(EntityTypeBuilder<Progetto> builder)
+		protected override void ConfigureEntity(EntityTypeBuilder<Progetto> builder)
 		{
 			builder.ToTable("Progetti"); //nome tabella
-
-			builder.HasKey(p => p.Id); //chiave primaria
 
 			builder.Property(p => p.Nome) //proprietà Nome
 				.IsRequired()

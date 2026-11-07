@@ -4,13 +4,11 @@ using Pinax.Domain.Entities;
 
 namespace Pinax.Infrastructure.Persistence.Configurations
 {
-	public class AssegnazioneAttivitaConfiguration : IEntityTypeConfiguration<AssegnazioneAttivita> //implementazione interfaccia
+	public class AssegnazioneAttivitaConfiguration : BaseEntityConfiguration<AssegnazioneAttivita> //eredita la configurazione comune da BaseEntityConfiguration
 	{
-		public void Configure(EntityTypeBuilder<AssegnazioneAttivita> builder)
+		protected override void ConfigureEntity(EntityTypeBuilder<AssegnazioneAttivita> builder)
 		{
 			builder.ToTable("AssegnazioniAttivita"); //nome tabella
-
-			builder.HasKey(a => a.Id); //chiave primaria
 
 			builder.HasOne(a => a.Attivita) //l'AssegnazioneAttivita ha un'Attivita
 				.WithMany(att => att.Assegnazioni) //quell'Attivita ha molte AssegnazioneAttivita
