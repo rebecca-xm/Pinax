@@ -15,10 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Pinax.Application\Pinax.Application.csproj" />
     <ProjectReference Include="..\Pinax.Infrastructure\Pinax.Infrastructure.csproj" />
   </ItemGroup>

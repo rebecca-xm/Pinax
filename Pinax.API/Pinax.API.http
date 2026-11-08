@@ -1,6 +1,9 @@
 @Pinax.API_HostAddress = http://localhost:5265
 
-GET {{Pinax.API_HostAddress}}/weatherforecast/
+GET {{Pinax.API_HostAddress}}/api/progetti
 Accept: application/json
 
 ###
+
+GET {{Pinax.API_HostAddress}}/api/progetti?includiArchiviati=true
+Accept: application/json
