@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/docs/">
+    <File Path="application.md" />
     <File Path="database.md" />
   </Folder>
   <Project Path="Pinax.API/Pinax.API.csproj" />
